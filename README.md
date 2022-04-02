@@ -20,60 +20,82 @@ Use imwrite(filename, image) to write the image.
 End the program and close the output image windows.
 ## Program:
 ### Developed By:
+Dinesh.S
 ### Register Number: 
-i) #To Read,display the image
+212220230011
+
+# To Read,display the image
 ```
   import cv2
+  color_image = cv2.imread('dhoni.jpg',1)
+  cv2.imshow('colorimage',color_image)
+  cv2.waitKey(0)
 
 ```
-ii) #To write the image
+# To write the image
 ```
-
-
-
-```
-iii) #Find the shape of the Image
-```python3
-
-
+  import cv2
+  color_image = cv2.imread('dhoni.jpg',1)
+  w = cv2.imwrite('dhoni.jpg',color_image)
+  cv2.imshow('212220230011',color_image)
+  cv2.waitKey(0)
 
 ```
-iv) #To access rows and columns
-
-```python3
-
-
+# Find the shape of the Image
+```
+  import cv2
+  import random
+  color_image = cv2.imread('dhoni.jpg',1)
+  print(color_image.shape)
 
 ```
-v) #To cut and paste portion of image
-```python3
-
-
+# To access rows and columns
 
 ```
+  import cv2
+  import random
+  color_image = cv2.imread('dhoni.jpg',1)
+  for i in range(100):
+    for j in range(color_image.shape[1]):
+        color_image[i][j] = [random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+  cv2.imshow('Dhoni',color_image)
+  cv2.waitKey(0)
 
+```
+# To cut and paste portion of image
+```
+import cv2
+color_image = cv2.imread('dhoni.jpg',-1)
+tag = color_image[300:400,300:400]
+color_image[50:150,50:150] = tag
+cv2.imshow('Dhoni',color_image)
+cv2.waitKey(0)
+
+```
 ## Output:
 
 ### i) Read and display the image
-
+![output](./static/img/dhoni1.PNG)
 <br>
 <br>
 
 ### ii)Write the image
-
+![output](./static/img/dhoni2.PNG)
 <br>
 <br>
 
 ### iii)Shape of the Image
-
+![output](./static/img/dhoni3.PNG)
 <br>
 <br>
 
 ### iv)Access rows and columns
+![output](./static/img/dhoni4.PNG)
 <br>
 <br>
 
 ### v)Cut and paste portion of image
+![output](./static/img/dhoni5.PNG)
 <br>
 <br>
 
